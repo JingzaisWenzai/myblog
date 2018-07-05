@@ -1,0 +1,120 @@
+@import "fn";
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.6;
+  font-family: @fontDefault;
+}
+
+html, body {
+  height: 100%;
+  background: #ECECEC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #515151;
+  .setTapColor();
+
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+}
+
+input, select, textarea {
+  font-family: 'Microsoft YaHei';
+}
+
+select,input[type="date"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea {
+  border-radius: 5px;
+  resize: none;
+  line-height: normal;
+  font-size: 14px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+::-webkit-inner-spin-button {
+  visibility: hidden;
+}
+
+input, select, img, button, textarea {
+  .setTapColor();
+}
+
+//去除火狐自带红色边框
+input[required]:invalid, input:focus:invalid, textarea[required]:invalid, textarea:focus:invalid {
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+/*::-webkit-scrollbar-track-piece {
+  background: transparent;
+  border-left: 1px solid #d2d2d2;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  box-shadow: 0 0 3px #b3c0d3 inset;
+  border-radius: 5px;
+  background-color: #dcdcdc
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b3c0d3;
+  background-clip: padding-box;
+  border: 1px solid #b3c0d3;
+  min-height: 28px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c6d2e4;
+}
+
+scrollbar-track-color {
+  background-color: #dcdcdc
+}*/

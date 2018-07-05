@@ -1,8 +1,21 @@
 <template>
   <div class="index">
-    <div>用户名<input type="text" name="" v-model="login.name"/></div>
-    <div>密码<input type="text" name="" v-model="login.password"/></div>
-    <button @click="getValue">登录</button>
+    <el-row>
+      <el-col :xs="12" :sm="8" :md="8" :lg="6" :xl="4" v-for="article in articles" :key="article.id">
+        <el-card :body-style="{ padding: '0px' }">
+          <img src="../../assets/image/timthumb.jpg" class="image">
+          <div style="padding: 14px;">
+            <span>{{article.title}}</span>
+            <div class="bottom clearfix">
+              <time class="time">2018-07-04</time>
+              <span><i class="el-icon-view"></i>{{article.view}}</span>
+              <span><i class="el-icon-edit"></i>{{article.leaveMessage}}</span>
+              <span><i class="el-icon-star-off"></i>{{article.collection}}</span>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -11,11 +24,17 @@ export default {
   name: 'index',
   data () {
     return {
-      login: {
-        name: '',
-        password: ''
-      },
-      inpContent: '汪鹏'
+      articles: [
+        {
+          id: 1,
+          title: '文章该怎么写',
+          url: '../../assets/image/hamburger.png',
+          date: new Date(),
+          view: 1255,
+          leaveMessage: 16,
+          collection: 24
+        }
+      ]
     }
   },
   methods: {

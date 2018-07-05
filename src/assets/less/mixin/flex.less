@@ -1,0 +1,15 @@
+﻿.flexbox(){
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+}
+
+.flex(@var: 1, @total: 1) {
+  -webkit-box-flex:@var;
+  -moz-box-flex:@var;
+  -webkit-flex:@var;
+  -ms-flex:@var;
+  flex:@var;
+}
