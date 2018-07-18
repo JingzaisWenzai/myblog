@@ -1,0 +1,44 @@
+.article-detail {
+  margin: auto;
+  padding: 0 20px;
+  
+  .article-title-wrap {
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .article-title{
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .article-info{
+    span {
+      color: #888;
+      font-size: 12px;
+      padding-left: 20px;
+      display: inline-block;
+      position: relative;
+      &:before{
+        content: '';
+        width: 4px;
+        height: 4px;
+        background: #BFBFBF;
+        position: absolute;
+        left: 6px;
+        top: 40%;
+      }
+    }
+  }
+
+  .article-head-image{
+    margin-bottom: 30px;
+  }
+
+  .article-detail-content{
+    p{
+      margin-bottom: 20px;
+    }
+  }
+}

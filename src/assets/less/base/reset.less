@@ -11,7 +11,7 @@ body {
 
 html, body {
   height: 100%;
-  background: #ECECEC;
+  background: #ffffff;
 }
 
 * {
@@ -23,11 +23,17 @@ ol, ul {
   list-style: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+}
+
 img {
   border: 0;
   max-width: 100%;
-  max-height: 100%;
   vertical-align: middle;
+  display: block;
 }
 
 a {
@@ -38,6 +44,10 @@ a {
   &:focus, &:hover {
     text-decoration: none;
   }
+}
+
+p{
+  color: #555;
 }
 
 input, select, textarea {
@@ -88,6 +98,10 @@ input[required]:invalid, input:focus:invalid, textarea[required]:invalid, textar
   -moz-box-shadow: none;
 }
 
+body, blockquote, dd, dl, figure, form, p, pre, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  word-wrap: break-word;
+}
 /*::-webkit-scrollbar-track-piece {
   background: transparent;
   border-left: 1px solid #d2d2d2;

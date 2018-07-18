@@ -16,7 +16,6 @@
       <el-main>
         <router-view></router-view>
       </el-main>
-      <el-footer>Footer</el-footer>
     </el-container>
   </div>
 </template>
@@ -28,9 +27,9 @@ export default {
     return {
       menus: [
         {title: '首页', action: '/'},
-        {title: '最新', action: 'newest'},
-        {title: '文章', action: 'article', sub: [{title: 'CSS', action: 'css'}, {title: 'JS', action: 'js'}, {title: 'VUE', action: 'vue'}]},
-        {title: '关于', action: 'about'}
+        {title: '最新', action: '/newest'},
+        {title: '文章', action: '/articles', sub: [{title: 'CSS', action: 'css'}, {title: 'JS', action: 'js'}, {title: 'VUE', action: 'vue'}]},
+        {title: '关于', action: '/about'}
       ]
     }
   },
