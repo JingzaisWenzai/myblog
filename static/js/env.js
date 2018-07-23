@@ -11,10 +11,9 @@
     } else if (/dev\./ig.test(host)) {
       return configs.development
     } else {
-      return configs.production
+      return configs.development
     }
   })()
-
   var baseUrl = window.location.protocol + '//' + window.location.host
 
   window._ENV = {

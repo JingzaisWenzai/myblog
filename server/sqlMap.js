@@ -1,5 +1,6 @@
 var sqlMap = {
-  getValue: 'SELECT * FROM test WHERE id = ?',
+  getArticles: 'SELECT * FROM test',
+  getArticleDetail: 'SELECT * FROM test WHERE id = ?',
   setValue: 'UPDATE test SET name = ? WHERE id = ?'
 }
 

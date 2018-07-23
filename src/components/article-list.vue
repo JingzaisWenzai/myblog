@@ -1,8 +1,8 @@
 <template>
-  <i-row class="articles-list index-article-list">
-    <el-col :xs="24" :sm="8" :md="8" :lg="6" :xl="4" v-for="article in articles" :key="article.id">
+  <i-row class="articles-list">
+    <i-col :xs="24" :sm="8" :md="8" :lg="6" :xl="4" v-for="article in articles" :key="article.id">
       <router-link :to="'/articles/' + article.id + '/article-detail'" :title="article.title">
-        <el-card :body-style="{ padding: '0px' }">
+        <i-card :padding="0" :bordered="false">
           <figure class="preview">
             <img src="../assets/image/timthumb.jpg" class="image">
           </figure>
@@ -10,22 +10,27 @@
             <h2 class="title">{{article.title}}</h2>
             <div class="article-info clearfix">
               <span class="time">2018-07-04</span>
-              <span><i class="el-icon-view"></i>{{article.view}}</span>
-              <span><i class="el-icon-edit"></i>{{article.leaveMessage}}</span>
-              <span><i class="el-icon-star-off"></i>{{article.collection}}</span>
+              <span><i-icon type="ios-eye-outline" size="14"></i-icon>{{article.view}}</span>
+              <span><i-icon type="ios-chatbubble-outline" size="14"></i-icon>{{article.leaveMessage}}</span>
+              <span><i-icon type="ios-heart-outline" size="14"></i-icon>{{article.collection}}</span>
             </div>
           </div>
-        </el-card>
+        </i-card>
       </router-link>
-    </el-col>
+    </i-col>
   </i-row>
 </template>
 
 <script type="text/javascript">
+import api from '@/api'
 export default {
   name: 'article-list',
   data () {
     return {
+      query: {
+        offset: 0,
+        limit: 2
+      },
       articles: [
         {
           id: 1,
@@ -48,8 +53,16 @@ export default {
       ]
     }
   },
+  created () {
+    // this.getArticles()
+  },
   methods: {
     getArticles () {
+      api.getArticles(this.query).then(rsp => {
+        console.log(rsp)
+      }).catch(e => {
+        console.error(e.message)
+      })
     }
   }
 }
