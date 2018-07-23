@@ -1,5 +1,5 @@
 <template>
-  <el-row class="articles-list index-article-list">
+  <i-row class="articles-list index-article-list">
     <el-col :xs="24" :sm="8" :md="8" :lg="6" :xl="4" v-for="article in articles" :key="article.id">
       <router-link :to="'/articles/' + article.id + '/article-detail'" :title="article.title">
         <el-card :body-style="{ padding: '0px' }">
@@ -18,7 +18,7 @@
         </el-card>
       </router-link>
     </el-col>
-  </el-row>
+  </i-row>
 </template>
 
 <script type="text/javascript">
