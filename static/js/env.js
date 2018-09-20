@@ -2,6 +2,9 @@
   var configs = {
     'development': {
       apiRoot: 'http://localhost:8088/'
+    },
+    'production': {
+      apiRoot: 'http://www.whispershirley.cn:8088/'
     }
   }
   var env = (function () {

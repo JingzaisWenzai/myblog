@@ -13,5 +13,9 @@ export default {
   },
   setValue (model) {
     return api.post('/api/setValue', model)
+  },
+  getAccessToken (url) {
+    console.log(url)
+    return api.post('/api/getToken', {url: url})
   }
 }

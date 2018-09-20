@@ -1,5 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+// import Index from "../pages/index/index";
+// import Articles from "../pages/articles/index";
+// import ArticleDetail from "../pages/articles/detail";
+// import Newest from "../pages/newest/index";
+// import About from "../pages/about/index";
 const Index = resolve => require(['@/pages/index'], resolve)
 const Articles = resolve => require(['@/pages/articles'], resolve)
 const ArticleDetail = resolve => require(['@/pages/articles/detail'], resolve)

@@ -14,4 +14,8 @@ router.post('/setValue', (req, res, next) => {
   api.setValue(req, res, next);
 });
 
+router.post('/getToken', (req, res, next) => {
+  api.getAccessToken(req, res, next);
+});
+
 module.exports = router;
